@@ -1,0 +1,49 @@
+.authorization {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: 48px auto 0;
+  padding: 0 93px 50px;
+  background-color: rgba(88, 130, 193, .28);
+  backdrop-filter: blur(3px);
+  border-radius: 40px;
+  border: 3px solid rgba(88, 130, 193, .49);
+  position: relative;
+  top: 195px;
+  color: #fff;
+}
+
+.authorization__logo {
+  margin: 48px 0 0;
+}
+
+.authorization__title {
+  margin: 13px 0 0;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.authorization__form {
+  margin: 26px 0 0;
+}
+
+.authorization__input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.authorization__input-label {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.authorization__input {
+  margin: 0;
+  border: 1px solid #bcbec0;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 17px 23px;
+}
