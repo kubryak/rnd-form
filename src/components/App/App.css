@@ -37,3 +37,18 @@
   opacity: 1;
   color: #03182c;
 }
+
+.button {
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  border-radius: 40px;
+  padding: 13px 0;
+}
+
+@media screen and (max-width:460px) {
+  .input-error {
+    min-height: 25px;
+    font-size: 10px;
+  }
+}

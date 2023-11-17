@@ -1,10 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Login.css'
 import Logo from '../Logo/Logo'
 import { useFormAndValidation } from '../../hooks/useFormAndValidation'
 
-export default function Login() {
+
+export default function Login({ handleLogin, isLoading }) {
+
   const { values, handleChange, errors, isValid, setIsValid } = useFormAndValidation();
 
   const { email, password } = values;
@@ -15,10 +17,10 @@ export default function Login() {
     }
   }, [email, password])
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // onLogin();
-  }
+    handleLogin()
+  };
 
   return (
     <main>
@@ -63,7 +65,9 @@ export default function Login() {
           </div>
           <p className='authorization__forgot-text'><Link className='authorization__link'>Забыли пароль?</Link></p>
           <div className='authorization__buttons'>
-            <button type='submit' className={!isValid ? 'authorization__button authorization__button_type_disabled' : 'authorization__button authorization__button_type_active'} disabled={!isValid}>Войти</button>
+            <button type='submit' className={!isValid || isLoading ? 'button authorization__button_type_disabled' : 'button authorization__button_type_active'} disabled={!isValid || isLoading}>
+              {!isLoading ? 'Войти' : 'Загрузка...'}
+            </button>
             <p className='authorization__text'>Еще не зарегистрированы? <Link className='authorization__link authorization__link_type_registration'>Регистрация</Link>
             </p>
           </div>
