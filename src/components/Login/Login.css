@@ -2,14 +2,12 @@
   max-width: 500px;
   display: flex;
   flex-direction: column;
-  margin: 48px auto 0;
-  padding: 0 93px 50px;
+  margin: 0 auto;
+  padding: 0 93px 43px;
   background-color: rgba(88, 130, 193, .28);
   backdrop-filter: blur(3px);
   border-radius: 40px;
   border: 3px solid rgba(88, 130, 193, .49);
-  position: relative;
-  top: 195px;
   color: #fff;
 }
 
@@ -30,7 +28,7 @@
 .authorization__input-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
 }
 
 .authorization__input-label {
@@ -40,10 +38,77 @@
 }
 
 .authorization__input {
-  margin: 0;
+  margin: 0 0 3px 0;
   border: 1px solid #bcbec0;
   border-radius: 10px;
   font-size: 14px;
   font-weight: 400;
   padding: 17px 23px;
+}
+
+.authorization__input:focus {
+  outline: none;
+  box-shadow: 2px 2px 1px #003465;
+}
+
+.authorization__forgot-text {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.authorization__buttons {
+  margin: 42px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.authorization__button {
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  border-radius: 40px;
+  padding: 13px 0;
+}
+
+.authorization__button_type_disabled {
+  color: gray;
+  background-color: #c7c7c7;
+}
+
+.authorization__button_type_active {
+  color: #fff;
+  background-color: #003465;
+  transition: opacity .3s ease;
+  cursor: pointer;
+}
+
+.authorization__button_type_active:hover {
+  opacity: .8;
+}
+
+.authorization__text {
+  margin: 32px 0 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.authorization__link {
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity .5s ease;
+}
+
+.authorization__link:hover {
+  opacity: 0.8;
+}
+
+.authorization__link:visited {
+  color: #fff;
+}
+
+.authorization__link_type_registration {
+  font-weight: 700;
 }

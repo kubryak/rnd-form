@@ -10,12 +10,30 @@
   min-width: 320px;
   min-height: 100vh;
   margin: 0 auto;
+  padding-top: 10%;
   font-family: 'Inter', Arial, Helvetica, sans-serif;
-  background-image: url(../../images/Glass\ Effect\ Login\ Page\ -\ Blue.png);
+  background-image: url(../../images/background.png);
   color: 000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
+}
+
+.input-error {
+  display: block;
+  visibility: hidden;
+  min-height: 35px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.input-error_active {
+  visibility: visible;
+  opacity: 1;
+  color: #03182c;
 }
